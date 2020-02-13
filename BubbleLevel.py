@@ -5,26 +5,6 @@ import random
 import time
 import math
 
-print(microbit.accelerometer.get_x())
-
-print(microbit.accelerometer.get_y())
-
-print(microbit.accelerometer.get_z())
-
-print(microbit.accelerometer.get_values())
-
-x = microbit.accelerometer.get_x()
-y = microbit.accelerometer.get_y()
-z = microbit.accelerometer.get_z()
-
-Ax = ((math.atan2(x,(math.sqrt((y**2)+(z**2)))))*180)/(math.pi)
-Ay = ((math.atan2(y,(math.sqrt((x**2)+(z**2)))))*180)/(math.pi)
-Az = ((math.atan2(z,(math.sqrt((x**2)+(y**2)))))*180)/(math.pi)
-
-# while True:
-#     time.sleep(1)
-#     print((microbit.accelerometer.get_x(), microbit.accelerometer.get_y(), microbit.accelerometer.get_z(),))
-
 def find_tilt_x(acc_x, acc_y, acc_z):
 # This function defines the angle at which the microbit is tilted in the x direction in radians.
 # It takes three parameters, acc_x, acc_y, acc_z, which are the values on each axis
@@ -86,3 +66,24 @@ while True:
     acc_z = microbit.accelerometer.get_z()
 
     point_direction(find_tilt_x(acc_x, acc_y, acc_z), find_tilt_y(acc_x, acc_y, acc_z))
+
+
+# print(microbit.accelerometer.get_x())
+
+# print(microbit.accelerometer.get_y())
+
+# print(microbit.accelerometer.get_z())
+
+# print(microbit.accelerometer.get_values())
+
+# x = microbit.accelerometer.get_x()
+# y = microbit.accelerometer.get_y()
+# z = microbit.accelerometer.get_z()
+
+# Ax = ((math.atan2(x,(math.sqrt((y**2)+(z**2)))))*180)/(math.pi)
+# Ay = ((math.atan2(y,(math.sqrt((x**2)+(z**2)))))*180)/(math.pi)
+# Az = ((math.atan2(z,(math.sqrt((x**2)+(y**2)))))*180)/(math.pi)
+
+# while True:
+#     time.sleep(1)
+#     print((microbit.accelerometer.get_x(), microbit.accelerometer.get_y(), microbit.accelerometer.get_z(),))

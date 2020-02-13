@@ -27,7 +27,8 @@ def multiplication(x,y):
 # It asks a question, determines if it matches the corrrect answer,
 # and then appropriately marks it correct or incorrect.
 # It takes two arguments, x and y, which are the random numbers generated.
-# This function has no return value.
+# If the answer is right, it returns the variable correct. If it is incorrect,
+# it returns the variable correct.
     print ("What is ", x, " x ", y , "?")
     answer2=int(input())
     if (answer2) == (x * y):
@@ -46,7 +47,8 @@ def subtraction(x,y):
 # It asks a question, determines if it matches the corrrect answer,
 # and then appropriately marks it correct or incorrect.
 # It takes two arguments, x and y, which are the random numbers generated.
-# This function has no return value.
+# If the answer is right, it returns the variable correct. If it is incorrect,
+# it returns the variable correct.
     print("What is ", x, " - ", y , "?")
     answer3=int(input())
     if (answer3) == (x - y):
@@ -67,7 +69,7 @@ def math_test():
 # from the functions above). It calls each function above (addition, subtraction, and multiplication.)
 # Depending on the questions that were correct, it will count those and return a score out of 21.
 # Based on that score, if statments will generate certain print statements to be presented.
-# It doesn't take any parameters. It has no return value.
+# It doesn't take any parameters. If the bonus is correct, it returns correct.
     score = 0
     for i in range(7):
         x = random.randint(0,12)
